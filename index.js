@@ -55,9 +55,9 @@ function getYearsMap(data, cb) {
     let years = cbArray.map((matches) => {
       return matches.Year;
     });
-    console.log(years);
+    return years;
 }
-getYearsMap(fifaData, getFinals);
+console.log(getYearsMap(fifaData, getFinals));
 
 // function getYears(callback) {
 //    let yearsData = [];
@@ -80,7 +80,7 @@ function getWinners(data, cb) {
             winners.push(e["Away Team Name"]);
         }
     });
-    return(winners);
+    return winners;
 }
 
 console.log(getWinners(fifaData, getFinals));
